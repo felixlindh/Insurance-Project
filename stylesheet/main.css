@@ -1,0 +1,768 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, html {
+  background-color: #f6f6f6;
+  line-height: 1.6em;
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* Resetting all link decorations */
+a {
+  text-decoration: none;
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.page-wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.item-text p {
+  color: #6e6b6b;
+}
+
+.item-text span {
+  color: white;
+}
+
+.item-box:nth-child(1) {
+  background-color: #F17949;
+}
+
+.item-box:nth-child(2) {
+  background-color: #FAB131;
+}
+
+.box-links {
+  color: white;
+}
+
+.main-container:nth-child(1) {
+  background-color: #A9A19E;
+}
+
+/* Background color of the picture cards */
+.blue {
+  background-color: #C7DDEA;
+}
+
+.orange {
+  background-color: #FAB131;
+}
+
+.dark-orange {
+  background-color: #F17949;
+}
+
+.contact-header {
+  background-color: #C7DDEA;
+  display: flex;
+  position: relative;
+  height: 22rem;
+  font-size: 2.4em;
+  font-weight: bold;
+  align-items: center;
+}
+
+.contact-header h1 {
+  width: 55%;
+  margin-left: 0.3em;
+  font-weight: 900;
+  font-size: 1.3em;
+  line-height: normal;
+}
+
+.man-baby-img {
+  position: absolute;
+  bottom: 0;
+  right: 0.5em;
+}
+
+/* Contact form */
+.contact-main {
+  background-color: #A9A19E;
+  padding: 1em;
+  padding-bottom: 12em;
+}
+
+.contact-main-title {
+  font-size: 2.5em;
+  line-height: normal;
+}
+
+.contact-main h2 {
+  font-size: 1em;
+  font-weight: bolder;
+  padding: 0.5em;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: rgb(238, 238, 238);
+}
+
+form input {
+  padding: 0.5em;
+}
+
+form label {
+  margin: 0.5em 0em 0.5em 1em;
+}
+
+form input, textarea {
+  border: none;
+  border-radius: 4px;
+}
+
+form textarea {
+  margin-bottom: 2em;
+  height: 7em;
+  padding: 0.5em;
+}
+
+form textarea::-moz-placeholder {
+  color: #111;
+  font-size: 1.2em;
+  font-weight: 550;
+}
+
+form textarea:-ms-input-placeholder {
+  color: #111;
+  font-size: 1.2em;
+  font-weight: 550;
+}
+
+form textarea::placeholder {
+  color: #111;
+  font-size: 1.2em;
+  font-weight: 550;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+  background-color: #C7DDEA;
+  font-family: "Fira Sans", sans-serif;
+  padding: 1em;
+  box-shadow: 0 0 10px #111;
+}
+
+/* Map */
+.map-container {
+  max-width: 100vw;
+  height: 30em;
+  position: relative;
+}
+
+.map-img {
+  width: 100%;
+  height: 30em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(70%);
+}
+
+/* Yellow address card */
+.address-card {
+  background-color: #FAB131;
+  color: #FFF;
+  width: 20em;
+  height: 12em;
+  position: absolute;
+  top: -6.2em;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.address-card h2 {
+  font-size: 2.7em;
+  margin: 1.5rem 1.2rem;
+  font-weight: bolder;
+}
+
+address {
+  margin: 0.5rem 1.2rem;
+  font-family: "Fira Sana", sans-serif;
+}
+
+/* Footer */
+footer {
+  background-color: #A9A19E;
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .page-wrapper {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .contact-header {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .contact-main h2 {
+    font-size: 1.4em;
+  }
+  .man-baby-img {
+    right: 2.5em;
+  }
+  .nav-list {
+    position: static;
+  }
+  .contact-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8em 10em 10em 10em;
+  }
+  .main-title {
+    width: 50%;
+  }
+  form {
+    width: 50%;
+  }
+  form textarea {
+    margin-bottom: 2em;
+    height: 15em;
+    padding: 0.5em;
+  }
+  form input {
+    padding: 1.2em;
+    margin-bottom: 2em;
+  }
+  form label {
+    margin: 1em 0em 0.5em 0em;
+  }
+  .submit-btn {
+    margin-top: 2em;
+  }
+  .address-card {
+    top: 3em;
+    left: 3em;
+    margin: 0 0;
+  }
+  footer {
+    display: block;
+  }
+}
+.header-item {
+  background-color: #C7DDEA;
+  height: 90vh;
+  max-width: 100%;
+  padding: 2em;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 25em;
+}
+
+.item-text h1 {
+  font-size: 3em;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+.item-text p {
+  font-weight: 900;
+  word-spacing: 0.02em;
+}
+
+.family-img-container {
+  height: 356px;
+  width: 350px;
+}
+
+.family-image {
+  width: 350px;
+  height: 356px;
+}
+
+.item-box {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-box p {
+  font-weight: 900;
+  opacity: 60%;
+}
+
+.box-links {
+  font-size: 3em;
+  font-weight: 900;
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+}
+
+.item-box:nth-child(1) {
+  background-color: #F17949;
+}
+
+.item-box:nth-child(2) {
+  background-color: #FAB131;
+}
+
+@media screen and (min-width: 1200px) {
+  .item-text > h1 {
+    font-size: 3.5em;
+  }
+  .page-wrapper {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .page-header {
+    display: flex;
+    height: 80vh;
+  }
+  .header-item {
+    flex: 1 1 50%;
+    height: auto;
+    position: relative;
+  }
+  .item-text {
+    justify-content: space-around;
+    padding: 1em 8em 0em 8em;
+  }
+  .header-item-2 {
+    flex: 1 1 50%;
+  }
+  .family-img-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .item-box {
+    height: 50%;
+  }
+}
+.nav-list {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #FFF;
+  z-index: 1;
+}
+
+.list-item {
+  flex: 1 1 25%;
+  text-align: center;
+  padding: 2em 0;
+  background-color: #FFF;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.list-item:hover,
+.list-item:active {
+  background-color: #d6d6d6;
+  color: black;
+}
+
+.list-item a {
+  color: rgba(75, 75, 75, 0.7);
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1200px) {
+  /* Navigation */
+  .nav-list {
+    position: static;
+  }
+}
+.main-title {
+  color: #FFF;
+  font-size: 3em;
+  font-weight: 900;
+  padding: 1rem;
+  line-height: normal;
+  text-align: center;
+}
+
+.main-title h2 {
+  text-align: left;
+}
+
+.main-text {
+  padding: 0em 1em 1em 1em;
+  font-weight: bold;
+}
+
+.main-text p {
+  padding-bottom: 3em;
+  text-align: left;
+}
+
+.main-text:nth-child(1) {
+  padding-bottom: 2em;
+}
+
+.main-text:nth-child(2),
+.main-text:nth-child(3) {
+  text-align: center;
+}
+
+.main-container:nth-child(1) {
+  padding-bottom: 5em;
+}
+
+.main-container:nth-child(2) {
+  background-color: #FAB131;
+  padding: 2em 2em 2em 2em;
+}
+
+/* positioning of the cards content*/
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+}
+
+.card-picture {
+  border: none;
+  border-radius: 0.5em;
+  width: 18rem;
+  height: 150px;
+  margin: 0 auto;
+  position: absolute;
+  top: -2em;
+  left: 0;
+  right: 0;
+}
+
+.card {
+  background-color: #FFF;
+  width: 20rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: relative;
+  border-radius: 0.5em;
+  text-align: center;
+  height: 23rem;
+  box-shadow: 1px 1px 6px rgb(109, 109, 109);
+  cursor: zoom-in;
+  transition: 400ms;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 20px #111;
+  height: 25rem;
+  width: 23rem;
+}
+
+.card-title {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+.card-text {
+  padding: 1em 1em 2em 1em;
+  font-weight: 700;
+  color: #A9A19E;
+  opacity: 1;
+}
+
+/* Card images */
+.child-img {
+  height: 150px;
+  width: 159px;
+}
+
+.adult-img {
+  height: 150px;
+  width: 159px;
+}
+
+.old-img {
+  height: 150px;
+  width: 159px;
+}
+
+@media screen and (min-width: 1200px) {
+  .main-container {
+    display: flex;
+    position: relative;
+    height: 80vh;
+  }
+  .main-container:nth-child(1) {
+    flex-direction: row;
+    height: 33em;
+    padding: 7em;
+  }
+  .main-container:nth-child(2) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5em;
+    padding-bottom: 0;
+  }
+  .main-title {
+    width: 50%;
+  }
+  .main-title h2 {
+    width: 80%;
+    font-size: 1em;
+    margin-bottom: 2em;
+  }
+  .main-text {
+    width: 50%;
+  }
+  .main-text p {
+    line-height: 1.5em;
+    font-size: 1.3em;
+    padding-top: 1em;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    position: absolute;
+    bottom: -11em;
+    right: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .card {
+    margin: 0 0;
+  }
+}
+.tutorial-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tutorial-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  height: 12rem;
+}
+
+.tutorial-item h2 {
+  font-weight: 900;
+  line-height: 1em;
+  font-size: 3em;
+}
+
+.tutorial-item p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Ändrar färg på 3 av boxarna */
+.tutorial-item:nth-child(1) {
+  background-color: #C7DDEA;
+}
+
+.tutorial-item:nth-child(3) {
+  background-color: #A9A19E;
+}
+
+.tutorial-item:nth-child(5) {
+  background-color: #F17949;
+}
+
+/* Lägger till nummer i boxarna */
+.tutorial-item:nth-child(2)::before {
+  content: "01";
+}
+
+.tutorial-item:nth-child(3)::before {
+  content: "02";
+}
+
+.tutorial-item:nth-child(4)::before {
+  content: "03";
+}
+
+.tutorial-item:nth-child(5)::before {
+  content: "04";
+}
+
+.tutorial-item:nth-child(6)::before {
+  content: "05";
+}
+
+/* positioning the numbers */
+.tutorial-item::before {
+  content: "";
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  left: 0.5em;
+  top: 0.5em;
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 1200px) {
+  /* Tutorial */
+  .tutorial-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .tutorial-item {
+    flex: 1 1 33%;
+    height: 25rem;
+  }
+}
+footer {
+  background-color: #A9A19E;
+  height: 15rem;
+}
+
+.join-btn {
+  background-color: #FFF;
+  align-self: flex-start;
+  padding: 1.2em 4em;
+  font-weight: 700;
+  border-radius: 999em;
+  border: none;
+  box-shadow: 1px 1px 1px #111;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.join-btn:hover {
+  box-shadow: 0 0 20px #111;
+  background-color: #111;
+  color: #FFF;
+}
+
+.submit-btn {
+  background-color: #FFF;
+  padding: 1.2em 4em;
+  font-weight: 700;
+  border-radius: 999em;
+  border: none;
+  box-shadow: 1px 1px 1px #111;
+  transition: 400ms;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 0 20px #111;
+  background-color: #111;
+  color: #FFF;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  footer button {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 3em;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    transition: 400ms;
+  }
+  footer button:hover {
+    font-size: 2.5em;
+    text-shadow: 1px 1px 4px #111;
+  }
+  .pointer {
+    width: 0.7em;
+    height: 0.7em;
+    border: 2px solid #111;
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 0.5em;
+    border-bottom: none;
+    border-right: none;
+  }
+  .hidden {
+    display: block;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+p, button {
+  font-family: "Fira Sans", sans-serif;
+}/*# sourceMappingURL=main.css.map */

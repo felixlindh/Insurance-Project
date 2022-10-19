@@ -1,0 +1,86 @@
+@use "../abstracts/variables" as *;
+
+.tutorial-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tutorial-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    height: 12rem;
+}
+
+.tutorial-item h2{
+    font-weight: 900;
+    line-height: 1em;
+    font-size: 3em;
+}
+
+.tutorial-item p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Ändrar färg på 3 av boxarna */
+.tutorial-item:nth-child(1) {
+    background-color: $blue-clr;
+}
+.tutorial-item:nth-child(3) {
+    background-color: $grey-clr;
+}
+.tutorial-item:nth-child(5) {
+    background-color: $orange-clr;
+}
+
+
+/* Lägger till nummer i boxarna */
+.tutorial-item:nth-child(2)::before {
+    content: "01";
+}
+
+.tutorial-item:nth-child(3)::before {
+    content: "02";
+}
+
+.tutorial-item:nth-child(4)::before {
+    content: "03";
+}
+.tutorial-item:nth-child(5)::before {
+    content: "04";
+    
+}
+.tutorial-item:nth-child(6)::before {
+    content: "05";
+}
+/* positioning the numbers */
+.tutorial-item::before {
+    content: "";
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    left: .5em;
+    top: .5em;
+    opacity: 0.7;
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* Tutorial */ 
+    .tutorial-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .tutorial-item {
+        flex: 1 1 33%;
+        height: 25rem;
+    }
+
+    
+
+}

@@ -1,0 +1,5 @@
+@use "../abstracts/variables" as *;
+footer {
+    background-color: $grey-clr;
+    height: 15rem;
+}

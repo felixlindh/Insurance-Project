@@ -1,0 +1,171 @@
+@use "../abstracts/variables" as *;
+.main-title {
+    color: $white-clr;
+    font-size: 3em;
+    font-weight: 900;
+    padding: 1rem;
+    line-height: normal;
+    text-align: center;
+}
+
+
+.main-title h2 {
+    text-align: left;
+}
+
+.main-text {
+    padding: 0em 1em 1em 1em;
+    font-weight: bold;
+}
+
+.main-text p {
+    padding-bottom: 3em;
+    text-align: left;
+}
+
+.main-text:nth-child(1) {
+    padding-bottom: 2em;
+}
+
+.main-text:nth-child(2),
+.main-text:nth-child(3) {
+    text-align: center;
+}
+
+.main-container:nth-child(1) {
+    padding-bottom: 5em;
+}
+
+.main-container:nth-child(2) {
+    background-color: $yellow-clr;
+    padding: 2em 2em 2em 2em;
+}
+
+/* positioning of the cards content*/
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+.card-picture {
+    border: none;
+    border-radius: .5em;
+    width: 18rem;
+    height: 150px;
+    margin: 0 auto;
+    position: absolute;
+    top: -2em;
+    left: 0;
+    right: 0;
+}
+
+.card {
+    background-color: $white-clr;
+    width: 20rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    border-radius: .5em;
+    text-align: center;
+    height: 23rem;
+    box-shadow: 1px 1px 6px rgb(109, 109, 109);
+    cursor: zoom-in;
+    transition: 400ms;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 20px $black-clr;
+    height: 25rem;
+    width: 23rem;
+}
+
+.card-title {
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
+.card-text {
+    padding: 1em 1em 2em 1em;
+    font-weight: 700;
+    color: $grey-clr;
+    opacity: 1;
+}
+
+/* Card images */
+.child-img {
+    height: 150px;
+    width: 159px;
+}
+
+.adult-img {
+    height: 150px;
+    width: 159px;
+}
+
+.old-img {
+    height: 150px;
+    width: 159px;
+}
+
+@media screen and (min-width: 1200px) {
+
+
+    .main-container {
+        display: flex;
+        position: relative;
+        height: 80vh;
+    }
+
+    .main-container:nth-child(1) {
+        flex-direction: row;
+        height: 33em;
+        padding: 7em;
+    }
+
+    .main-container:nth-child(2) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5em;
+        padding-bottom: 0;
+    }
+
+    .main-title {
+        width:50%;
+    }   
+
+    .main-title h2 {
+        width: 80%;
+        font-size: 1em;
+        margin-bottom: 2em;
+    }
+
+    .main-text {
+        width: 50%;
+    }
+
+    .main-text p {
+        line-height: 1.5em;
+        font-size: 1.3em;
+        padding-top: 1em;
+    }
+
+    .card-container {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2em;
+        position: absolute;
+        bottom: -11em;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        
+    }
+    .card {
+        margin: 0 0;
+    }
+}
